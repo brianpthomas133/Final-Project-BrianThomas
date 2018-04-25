@@ -1,4 +1,3 @@
-install.packages("readstata13")
 install.packages("tidyverse")
 install.packages("readtext")
 
