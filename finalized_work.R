@@ -8,21 +8,6 @@ library(dplyr)
 library(readtext)
 library(tibble)
 
-#First, I converted the ANES time series from Stata to an Excel spreadsheet. 
-#Then, I selected the three variables I needed: the year polled (VCF0004), the 
-#region the respondent lived in (VCF0112), and the frequency the respondent 
-#attended religious services (VCF0131). 
-
-anes_data <- read_excel("C:/Users/brian/Desktop/Final_Project/anes_timeseries_cdf_dta/anes_data2.xls")
-key_indicators <- select(anes_data2, V2, V49, V75)
-
-#VCF0004 = V2 = year polled
-#VCF0112 = V49 = region
-#VCF0131 = V75 = service attendance
-
-colnames(anes_data) <- c("region", "attendance", "year")
-anes_data2 <- anes_data[18021:55673,]
-
 #Next, I accessed the Census Bureau's voter particpation records, specifically
 #"Table A-2. Reported Voting and Registration by Region, Educational Attainment 
 #and Labor Force Status for the Population 18 and Over: November 1964 to 2016"
